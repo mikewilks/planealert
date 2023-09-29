@@ -1,0 +1,15 @@
+{
+  "url": "http://123.123.123.123/tar1090/data/aircraft.json",
+  "hex_ids": [
+    "123456",
+    "abc123",
+    "123abc"
+  ],
+  "interval": 60,
+  "location": {
+    "latitude": 11.1111,
+    "longitude": -11.1111
+  },
+  "distance": 250,
+  "notify_url": "https://apprise_compliant_url_here"
+}

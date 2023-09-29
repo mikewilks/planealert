@@ -1,0 +1,4 @@
+apprise
+requests
+urllib3==1.26.16 # prevents ssl version issues
+
