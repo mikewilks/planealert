@@ -2,6 +2,8 @@
 import json
 import time
 import math
+import sys
+import os
 import requests
 import apprise
 
@@ -40,8 +42,17 @@ def haversine_distance(lat1, lon1, lat2, lon2):
 
 def main():
     """Main function to periodically check the URL for specified aircraft"""
-    with open("params.json", "r") as file:
-        print('loading params')
+
+    # Get the path to the input files
+    input_path = '.'  # Default to current directory
+    if len(sys.argv) > 1:
+        input_path = sys.argv[1]
+
+    # Get the name of the parameter file
+    param_filename = os.path.join(input_path, 'params.json')
+
+    with open(param_filename, "r") as file:
+        print(f'loading params {param_filename}')
         params = json.load(file)
 
     url = params["url"]
